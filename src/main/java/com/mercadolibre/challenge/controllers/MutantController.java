@@ -7,6 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -21,6 +22,7 @@ import java.util.Arrays;
 @Api(value = "MutantController")
 @RestController
 @Validated
+@Slf4j
 public class MutantController {
 
     MutantDetectorService detectorService;
@@ -42,10 +44,14 @@ public class MutantController {
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Void> postIsMutant(@RequestBody @Valid GenomeListRequest genomeListRequest){
 
-
+        log.info("Entrando a postIsMutant");
         String [] dna = Arrays.stream(genomeListRequest.getDna()).map(d->d.getDna()).toArray(String[]::new);
+        log.info("DNA recibido: ", dna);
         Boolean isMutant = detectorService.isMutant(dna);
+        log.info("Is mutant: ", isMutant);
+
         statsService.saveRecord(dna, isMutant);
+        log.info("Saved record");
 
         HttpStatus status = isMutant ? HttpStatus.OK : HttpStatus.FORBIDDEN;
 
