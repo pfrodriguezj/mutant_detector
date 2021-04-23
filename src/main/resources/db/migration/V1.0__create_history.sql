@@ -1,7 +1,6 @@
 CREATE TABLE history (
-                         id int NOT NULL AUTO_INCREMENT,
+                         id serial NOT NULL ,
                          dna varchar(16380) NOT NULL,
-                         is_mutant bit NOT NULL,
+                         is_mutant boolean NOT NULL,
                          CONSTRAINT history_PK PRIMARY KEY (id)
 )
-
