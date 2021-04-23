@@ -46,9 +46,9 @@ public class MutantController {
 
         log.info("Entrando a postIsMutant");
         String [] dna = Arrays.stream(genomeListRequest.getDna()).map(d->d.getDna()).toArray(String[]::new);
-        log.info("DNA recibido: ", dna);
+        log.info("DNA recibido: " + dna, dna);
         Boolean isMutant = detectorService.isMutant(dna);
-        log.info("Is mutant: ", isMutant);
+        log.info("Is mutant: " + isMutant);
 
         statsService.saveRecord(dna, isMutant);
         log.info("Saved record");
