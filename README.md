@@ -21,7 +21,7 @@ mvn spring-boot:run
 ## Endpoints
 Cuando la aplición este en ejecución, puede acceder a la API, así:
 
-POST /mutant -> http://localhost:5000/mutant
+POST /mutant -> http://localhost:5000/mutant  
 GET /stats -> http://localhost:5000/stats
 
 En la nube:  
