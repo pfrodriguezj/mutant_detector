@@ -25,7 +25,7 @@ POST /mutant -> http://localhost:5000/mutant
 GET /stats -> http://localhost:5000/stats
 
 En la nube:
-https://cryptic-sea-14639.herokuapp.com/mutant
+https://cryptic-sea-14639.herokuapp.com/mutant  
 https://cryptic-sea-14639.herokuapp.com/stats
 
 La documentación de swagger se puede acceder en:
