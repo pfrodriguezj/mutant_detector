@@ -8,11 +8,11 @@ Al ejecutar el proyecto se creará (si no existen) la tabla history, para lo cua
 postgres en su entorno local con nombre db63rpvi4rkm29 
 (puede editar los valores correspondientes en el application.properties): 
 
-###Puerto:
+###Puerto
 5432
-###Usuario:
+###Usuario
 fxhottexlzdxcz
-###Password:
+###Password
 a937c75c1b83b94dfdaaa8b35c54fa8c4ae53004d22d8750fdfc3716693a6c04
 
 ## Ejecución
