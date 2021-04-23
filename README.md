@@ -4,15 +4,16 @@
 mvn install
 
 ## Base de datos
-Al ejecutar el proyecto se creará (si no existe) el esquema Mutants, para lo cual debe existir una base de datos
-mysql en su entorno local, así (puede editar los valores correspondientes en el application.properties): 
+Al ejecutar el proyecto se creará (si no existen) la tabla history, para lo cual debe existir una base de datos
+postgres en su entorno local con nombre db63rpvi4rkm29 
+(puede editar los valores correspondientes en el application.properties): 
 
 ###Puerto:
-3306
+5432
 ###Usuario:
-root
+fxhottexlzdxcz
 ###Password:
-PASSWORD (en mayúscula)
+a937c75c1b83b94dfdaaa8b35c54fa8c4ae53004d22d8750fdfc3716693a6c04
 
 ## Ejecución
 mvn spring-boot:run
